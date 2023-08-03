@@ -3,11 +3,20 @@
 # Answers
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
-
+query: {name: "Babelgum"}
+projection: {name: 1}
+sort: 
+skip: 
+limit: 
 <!-- Your Code Goes Here -->
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
+query: {number_of_employees: {$gte: 5000}}
+projection: 
+sort: {number_of_employees: 1}
+skip: 
+limit: 20 
 <!-- Your Code Goes Here -->
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
